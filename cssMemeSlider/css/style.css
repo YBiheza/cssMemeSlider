@@ -5,14 +5,32 @@
 }
 
 body {
-    background-color:#fefefe
+    background-color:#3e3d3d
 }
 
 .wrapper {
+    margin-top: 1%;
+    margin-bottom: 1%;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 4%;
     border: 3px #ffffff solid ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.slides {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 51%;
 }
 
 .slides input {
@@ -22,9 +40,22 @@ body {
 .slide {
     display: none;
     /*position: static;*/
-    width: auto;
+    width: 100%;
     height: auto;
     background-color: lightgrey;
+    margin-bottom: 5%;
+}
+
+.descr {
+    display: none;
+    /*position: static;*/
+    width: auto;
+    height: auto;
+    color: #ffffff; 
+    text-align: left;
+    margin-top: 3cqb;
+    font-family: sans-serif;
+    letter-spacing: -0.07em;
 }
 
 /* Для отображения активного слайда */
@@ -32,10 +63,21 @@ body {
     display: block;
 }
 
+.slides input:checked + * + p {
+    display: block;
+}
+
 /* Стили для контролов (точек) */
 .controls {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls:hover {
+    cursor: pointer;
 }
 
 .controls label {
@@ -49,10 +91,27 @@ body {
 }
 
 /* Для активной точки */
-.slides input:checked + .slide ~ .controls label[for="slide1"]:nth-of-type(1),
+/*.slides input:checked + .slide ~ .controls label[for="slide1"]:nth-of-type(1),
 .slides input:checked + .slide ~ .controls label[for="slide2"]:nth-of-type(2),
 .slides input:checked + .slide ~ .controls label[for="slide3"]:nth-of-type(3),
-.slides input:checked + .slide ~ .controls label[for="slide4"]:nth-of-type(4) {
-    background: #717171;
-}
+.slides input:checked + .slide ~ .controls label[for="slide4"]:nth-of-type(4),
+.slides input:checked + .slide ~ .controls label[for="slide5"]:nth-of-type(5),
+.slides input:checked + .slide ~ .controls label[for="slide6"]:nth-of-type(6) {
+background: #717171;
+}*/
 
+@media (max-width: 685px) {
+    .slides {
+        flex-direction: column;
+    }
+
+    .controls {
+        order: 2;
+        justify-content: center;
+    }
+
+    .descr {
+        order: 3;
+    }
+    
+}
