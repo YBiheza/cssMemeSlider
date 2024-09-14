@@ -53,9 +53,9 @@ body {
     height: auto;
     color: #ffffff; 
     text-align: left;
-    margin-top: 3cqb;
+    margin-top: 2.5%;
     font-family: sans-serif;
-    letter-spacing: -0.07em;
+    flex-wrap: wrap;
 }
 
 /* Для отображения активного слайда */
@@ -63,33 +63,67 @@ body {
     display: block;
 }
 
-.slides input:checked + * + p {
-    display: block;
+.slides input:checked + * + .descr {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* Стили для контролов (точек) */
 .controls {
     text-align: center;
-    margin-top: 4%;
+    margin-top: 1%;
     margin-bottom: 1%;
+    margin-right: 5%;
     display: flex;
     justify-content: space-between;
 }
 
-.controls:hover {
-    cursor: pointer;
+.label {
+    background-color: #ffffff;
 }
-
 .controls label {
     width: 10px;
     height: 10px;
-    background: #bbb;
+    background: #646464;
     border-radius: 50%;
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hov {
+    padding: 5% 2%;
+}
+
+.controls label:hover{
+    background-color: #bdbdbd;
+}
+
+.hov1:hover .label1,
+.hov2:hover .label2,
+.hov3:hover .label3,
+.hov4:hover .label4,
+.hov6:hover .label6,
+.hov5:hover .label5 {
+    background-color: #bdbdbd;
     cursor: pointer;
 }
 
+.hov:hover {
+    cursor: pointer;
+}
+
+.wrapper input[type="radio"]:nth-of-type(1):checked ~ .controls .label1,
+.wrapper input[type="radio"]:nth-of-type(2):checked ~ .controls .label2,
+.wrapper input[type="radio"]:nth-of-type(3):checked ~ .controls .label3,
+.wrapper input[type="radio"]:nth-of-type(4):checked ~ .controls .label4,
+.wrapper input[type="radio"]:nth-of-type(5):checked ~ .controls .label5,
+.wrapper input[type="radio"]:nth-of-type(6):checked ~ .controls .label6 {
+    background-color: #bcaaf5; 
+}
+  
 /* Для активной точки */
 /*.slides input:checked + .slide ~ .controls label[for="slide1"]:nth-of-type(1),
 .slides input:checked + .slide ~ .controls label[for="slide2"]:nth-of-type(2),
@@ -112,6 +146,12 @@ background: #717171;
 
     .descr {
         order: 3;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .slides input:checked + * + .descr {
+        width: 100%;
     }
     
 }
