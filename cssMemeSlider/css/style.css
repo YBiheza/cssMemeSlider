@@ -58,7 +58,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Для отображения активного слайда */
 .slides input:checked + .slide {
     display: block;
 }
@@ -69,20 +68,24 @@ body {
     flex-wrap: wrap;
 }
 
-/* Стили для контролов (точек) */
+
 .controls {
     text-align: center;
     margin-top: 1%;
     margin-bottom: 1%;
-    margin-right: 5%;
+    /*margin-right: 9%;*/
     display: flex;
     justify-content: space-between;
+    /*width: 14%;*/
 }
 
 .label {
     background-color: #ffffff;
+    background-color: transparent;
 }
-.controls label {
+
+.circle {
+    background-color: #ffffff;
     width: 10px;
     height: 10px;
     background: #646464;
@@ -93,20 +96,36 @@ body {
     transition: background-color 0.3s;
 }
 
-.hov {
-    padding: 5% 2%;
-}
+/*.controls label {
+    width: 10px;
+    height: 10px;
+    background: #646464;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}*/
 
-.controls label:hover{
+/*.label:hover .circle {
     background-color: #bdbdbd;
+    cursor: pointer;
+}*/
+
+.hov {
+    padding: 25% 2%;
 }
 
-.hov1:hover .label1,
-.hov2:hover .label2,
-.hov3:hover .label3,
-.hov4:hover .label4,
-.hov6:hover .label6,
-.hov5:hover .label5 {
+/*.controls label:hover{
+    background-color: #bdbdbd;
+}*/
+
+.hov1:hover .circle1,
+.hov2:hover .circle2,
+.hov3:hover .circle3,
+.hov4:hover .circle4,
+.hov5:hover .circle5,
+.hov6:hover .circle6 {
     background-color: #bdbdbd;
     cursor: pointer;
 }
@@ -115,24 +134,15 @@ body {
     cursor: pointer;
 }
 
-.wrapper input[type="radio"]:nth-of-type(1):checked ~ .controls .label1,
-.wrapper input[type="radio"]:nth-of-type(2):checked ~ .controls .label2,
-.wrapper input[type="radio"]:nth-of-type(3):checked ~ .controls .label3,
-.wrapper input[type="radio"]:nth-of-type(4):checked ~ .controls .label4,
-.wrapper input[type="radio"]:nth-of-type(5):checked ~ .controls .label5,
-.wrapper input[type="radio"]:nth-of-type(6):checked ~ .controls .label6 {
-    background-color: #bcaaf5; 
+
+.wrapper input[type="radio"]:nth-of-type(1):checked ~ .controls .label1 span,
+.wrapper input[type="radio"]:nth-of-type(2):checked ~ .controls .label2 span,
+.wrapper input[type="radio"]:nth-of-type(3):checked ~ .controls .label3 span,
+.wrapper input[type="radio"]:nth-of-type(4):checked ~ .controls .label4 span,
+.wrapper input[type="radio"]:nth-of-type(5):checked ~ .controls .label5 span,
+.wrapper input[type="radio"]:nth-of-type(6):checked ~ .controls .label6 span {
+    background-color: #bcaaf5;
 }
-  
-/* Для активной точки */
-/*.slides input:checked + .slide ~ .controls label[for="slide1"]:nth-of-type(1),
-.slides input:checked + .slide ~ .controls label[for="slide2"]:nth-of-type(2),
-.slides input:checked + .slide ~ .controls label[for="slide3"]:nth-of-type(3),
-.slides input:checked + .slide ~ .controls label[for="slide4"]:nth-of-type(4),
-.slides input:checked + .slide ~ .controls label[for="slide5"]:nth-of-type(5),
-.slides input:checked + .slide ~ .controls label[for="slide6"]:nth-of-type(6) {
-background: #717171;
-}*/
 
 @media (max-width: 685px) {
     .slides {
