@@ -35,6 +35,7 @@ body {
 
 .slides input {
     display: none;
+
 }
 
 .slide {
@@ -42,8 +43,6 @@ body {
     /*position: static;*/
     width: 100%;
     height: auto;
-    background-color: lightgrey;
-    margin-bottom: 5%;
 }
 
 .descr {
@@ -60,12 +59,30 @@ body {
 
 .slides input:checked + .slide {
     display: block;
+    animation-duration: 3s;
+    animation-name: slideeeee;
 }
+
+
+
+
+@keyframes slideeeee {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
 
 .slides input:checked + * + .descr {
     width: 50%;
     display: flex;
     flex-wrap: wrap;
+    animation-duration: 3s;
+    animation-name: slideeeee;
 }
 
 
