@@ -4,42 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">.
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
     </header>
     <main>
-        <div class="wrapper">
-            <div class="slider">
-                <img src="./assets/images/294da0bc8f8a07987d15d4d758dd4c65.jpg" alt="bulochka" class="slide-image slide current">
-                <img src="./assets/images/52092c19bc743b9a9f760a0c5a450be7.jpg" alt="money" class="slide-image slide">
-                <img src="./assets/images/a3373ded6826dc81b6b42d8d2911e5b8.jpg" alt="astronaut" class="slide-image slide">
-                <img src="./assets/images/db97900aff2ccd4508627509bc824412.jpg" alt="watermelon" class="slide-image slide">
-                <img src="./assets/images/photo_2023-04-29_09-06-30.jpg" alt="oblepiha" class="slide-image slide">
-                <img src="./assets/images/photo_2023-05-10_03-55-46.jpg" alt="uspevaem" class="slide-image slide">
-                <img src="./assets/images/photo_2023-05-21_13-47-17.jpg" alt="angry" class="slide-image slide">
-            </div>
-            <div class = "other">
-                <div class="subline">
-                    <p class="substr1 descr">Булочку хочется</p>
-                    <p class="substr2 descr">А я хотел творчеством зарабатывать</p>
-                    <p class="substr3 descr">ЗапуСкай</p>
-                    <p class="substr4 descr">Хочу арбуз</p>
-                    <p class="substr5 descr">Мммм облепиха</p>
-                    <p class="substr6 descr">Такс такс успеваем</p>
-                    <p class="substr7 descr">Яростная малявочка в бешенстве</p>
+        <div class="wrapper"> 
+            <div class="slides">
+                <input type="radio" name="slide" id="slide1" checked>
+                <img src="./assets/images/1.png" alt="bulochka" class="slide-image slide current">
+                <p class="substr1 descr">Булочку хочется</p>
+
+                <input type="radio" name="slide" id="slide2" >
+                <img src="./assets/images/2.png" alt="money" class="slide-image slide">
+                <p class="substr2 descr">Хотел творчеством зарабатывать</p>
+
+                <input type="radio" name="slide" id="slide3" >
+                <img src="./assets/images/3.png" alt="astronaut" class="slide-image slide">
+                <p class="substr3 descr">ЗапуСкай</p>
+
+                <input type="radio" name="slide" id="slide4" >
+                <img src="./assets/images/4.png" alt="watermelon" class="slide-image slide">
+                <p class="substr4 descr">Хочу арбуз</p>
+
+                
+                <input type="radio" name="slide" id="slide5" >
+                <img src="./assets/images/5.png" alt="uspevaem" class="slide-image slide">
+                <p class="substr6 descr">Такс такс успеваем</p>
+
+                <input type="radio" name="slide" id="slide6" >
+                <img src="./assets/images/6.png" alt="angry" class="slide-image slide">
+                <p class="substr7 descr">Яростная малявочка в бешенстве</p>
+
+
+                <!--<div class="controls">
+                    <div class="hov hov1">
+                        <label for="slide1" class="label label1"></label>
+                    </div>
+                    <div class="hov hov2">
+                        <label for="slide2" class="label label2"></label>
+                    </div>
+                    <div class="hov hov3">
+                        <label for="slide3" class="label label3"></label>
+                    </div>
+                    <div class="hov hov4">
+                        <label for="slide4" class="label label4"></label>
+                    </div>
+                    <div class="hov hov5">
+                        <label for="slide5" class="label label5"></label>
+                    </div>
+                    <div class="hov hov6">
+                        <label for="slide6" class="label label6"></label>
+                    </div>    
+                </div>-->  
+                <div class="controls">
+                    <label for="slide1" class="label label1">
+                        <div class="hov hov1">
+                            <span class = "circle circle1"></span>
+                        </div>
+                    </label>
+                    <label for="slide2" class="label label2">
+                        <div class="hov hov2">
+                            <span class = "circle circle2"></span>
+                        </div>
+                    </label>
+                    <label for="slide3" class="label label3">
+                        <div class="hov hov3">
+                            <span class = "circle circle3"></span>
+                        </div>
+                    </label>
+                    <label for="slide4" class="label label4">
+                        <div class="hov hov4">
+                            <span class = "circle circle4"></span>
+                        </div>
+                    </label>
+                    <label for="slide5" class="label label5">
+                        <div class="hov hov5">
+                            <span class = "circle circle5"></span>
+                        </div>
+                    </label>
+                    <label for="slide6" class="label label6">
+                        <div class="hov hov6">
+                            <span class = "circle circle6"></span>
+                        </div>
+                    </label>
                 </div>
-                <div class="controlls">
-                    <input type="radio" name="controll" class="controll controll1 checked" checked>
-                    <input type="radio" name="controll" class="controll controll2 checked" >
-                    <input type="radio" name="controll" class="controll controll3 checked" >
-                    <input type="radio" name="controll" class="controll controll4 checked" >
-                    <input type="radio" name="controll" class="controll controll5 checked" >
-                    <input type="radio" name="controll" class="controll controll6 checked" >
-                    <input type="radio" name="controll" class="controll controll7 checked" >
-                </div>
-            </div>
+            </div> 
         </div>
     </main>
 </body>
