@@ -18,7 +18,7 @@ body {
     padding-right: 10%;
     padding-top: 1%;
     padding-bottom: 4%;
-    border: 3px #ffffff solid ;
+    border: 0.1em #ffffff solid ;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -103,12 +103,12 @@ body {
 
 .circle {
     background-color: #ffffff;
-    width: 10px;
-    height: 10px;
+    width: 0.5em;
+    height: 0.5em;
     background: #646464;
     border-radius: 50%;
     display: inline-block;
-    margin: 0 2px;
+    margin: 0 0.08em;
     cursor: pointer;
     transition: background-color 0.3s;
 }
